@@ -1,0 +1,91 @@
+<div>
+<style scoped>
+    /* Seu CSS original para alinhamento */
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+    .dataframe tbody tr th {
+        vertical-align: top;
+        /* Novo: Adiciona cor de fundo e padding para destacar o nome do método */
+        background-color: #f8f9fa; 
+        text-align: left;
+        padding: 8px 15px;
+        font-weight: normal;
+    }
+    .dataframe thead th {
+        /* Seu CSS original para cabeçalho */
+        text-align: left; 
+        /* Novo: Estilo do Cabeçalho */
+        background-color: #007bff; /* Azul primário */
+        color: white;
+        padding: 10px 15px;
+        font-weight: 600;
+        border: none;
+    }
+
+    /* Estilos de Aprimoramento Estético para a Tabela */
+    .dataframe {
+        width: 100%; 
+        border-collapse: collapse;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+        overflow: hidden; /* Garante que bordas arredondadas funcionem */
+        border-radius: 8px; /* Bordas levemente arredondadas */
+    }
+
+    /* Estilo para as Células de Dados */
+    .dataframe td {
+        padding: 8px 15px;
+        text-align: right;
+        border-bottom: 1px solid #dee2e6; /* Linha divisória fina */
+    }
+
+    /* Efeito Zebra (linhas alternadas) */
+    .dataframe tbody tr:nth-child(even) {
+        background-color: #e9ecef; /* Cinza claro para linhas pares */
+    }
+
+    /* Remove a borda padrão do HTML */
+    .dataframe[border="1"] {
+        border: none;
+    }
+    
+    /* Hover para destacar a linha */
+    .dataframe tbody tr:hover {
+        background-color: #cce5ff; /* Fundo azul claro ao passar o mouse */
+        cursor: pointer;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: left;">
+      <th>Método</th>
+      <th>RMSE</th>
+      <th>MAE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Média (Baseline)</th>
+      <td>0.014562</td>
+      <td>0.005679</td>
+    </tr>
+    <tr>
+      <th>LOCF (Last Observation)</th>
+      <td>0.012259</td>
+      <td>0.004363</td>
+    </tr>
+    <tr>
+      <th><b>Interpolação Linear</b></th>
+      <td><b>0.006998</b></td>
+      <td><b>0.002682</b></td>
+    </tr>
+    <tr>
+      <th>Interpolação Spline (Ordem 3)</th>
+      <td>0.022537</td>
+      <td>0.008259</td>
+    </tr>
+  </tbody>
+</table>
+</div>
